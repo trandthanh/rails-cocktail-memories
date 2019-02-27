@@ -7,3 +7,19 @@
 <% end %>
 
 <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-default"  %>
+
+
+<h1>Reviews</h1>
+
+<% @cocktail.reviews.each do |review| %>
+  <%= review.content %>
+  <%= review.rating %>
+<% end %>
+
+<h1>Add a review</h1>
+
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
