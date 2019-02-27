@@ -1,17 +1,18 @@
 <div class="navbar-cm">
-  <div class="navbar-cm-left">
+  <div class="navbar-cm-left width">
     <%= link_to root_path do %>
       <%= image_tag "logo.png", class: "navbar-cm-logo" %>
     <% end %>
   </div>
   <div class="navbar-cm-middle">
     <%= link_to root_path do %>
-      <h3>Cocktail Memories</h3>
+      <h3 class="margin-strip">Cocktail Memories</h3>
     <% end %>
   </div>
-  <div class="navbar-cm-right">
+  <div class="navbar-cm-right width">
     <%= form_tag search_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a movie" %>
+      <%= text_field_tag :query, params[:query], class: "form-control navbar-cm-search", placeholder: "Cocktail?" %>
     <% end %>
+    <i class="fas fa-search"></i>
   </div>
 </div>

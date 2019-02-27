@@ -2,5 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 20px;
+  padding: 0 20px;
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px solid $white-smoke;
+}
+
+.navbar-cm-search {
+  border-radius: 30px;
+  font-size: 17px;
+}
+
+.navbar-cm-right {
+  display: flex;
+  align-items: center;
+  i {
+    margin-left: 10px;
+    font-size: 22px;
+  }
 }
