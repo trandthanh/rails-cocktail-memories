@@ -9,6 +9,10 @@
 <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-default"  %>
 
 
+<%= cl_image_tag(@cocktail.photo,
+      width: 400, height: 300, crop: :fill) %>
+
+
 <h1>Reviews</h1>
 
 <% @cocktail.reviews.each do |review| %>
