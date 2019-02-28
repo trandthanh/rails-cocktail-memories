@@ -1,0 +1,22 @@
+.banner-cm-2halfs {
+  display: flex;
+  width: 80vw;
+}
+
+.banner-cm-half {
+  background-color: $antiflash-white;
+  height: 80vh;
+  width: 50%;
+}
+
+.banner-cm-center {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-cm-center-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

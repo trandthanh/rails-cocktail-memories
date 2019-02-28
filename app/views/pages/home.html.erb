@@ -1,1 +1,33 @@
-<%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-default" %>
+<div class="banner-cm-center">
+  <div class="banner-cm-2halfs">
+    <div class="banner-cm-half background-picture" style="background-image: url(<%= asset_path 'cocktail1.png' %>);"></div>
+    <div class="banner-cm-half text-center banner-cm-center-center-column">
+      <h1 class="margin-strip mb-30px">Because we believe<br>that a cocktail tells a story</h1>
+      <p class="margin-strip mb-30px">
+        Let’s raise our glasses to these Proustian moments
+        <br>Past, future or present
+        <br>Let’s make these moments last forever
+        <br>One drop, this exquisite taste
+        <br>Always takes me back</p>
+        <%= link_to "SHARE YOUR COCKTAIL >", new_cocktail_path, class: "button-cm" %>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-cm-center text-center">
+  <div class="list-cm">
+    <h4>Our MOST-VOTED cocktails</h4>
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-cm">
+        <div class="card-cm-half background-picture" style="background-image: url(<%= asset_path 'cocktail1.png' %>);">
+
+        </div>
+        <div class="card-cm-half">
+          <h5><%= cocktail.name %></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

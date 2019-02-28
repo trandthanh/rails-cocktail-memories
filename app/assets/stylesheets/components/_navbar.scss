@@ -11,6 +11,7 @@
 .navbar-cm-search {
   border-radius: 30px;
   font-size: 17px;
+  color: gray;
 }
 
 .navbar-cm-right {
@@ -19,5 +20,16 @@
   i {
     margin-left: 10px;
     font-size: 22px;
+  }
+}
+
+.navbar-cm-2-middle {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0 10px;
+    font-size: 15px;
   }
 }
