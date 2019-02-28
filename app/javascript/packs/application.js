@@ -14,6 +14,8 @@ import 'select2/dist/css/select2.css';
 
 import { initSelect2 } from '../components/init_select2';
 import { loadDynamicBannerText } from '../components/search';
+import { aosAnimation } from '../components/aos'
 
 initSelect2();
 loadDynamicBannerText();
+aosAnimation();
