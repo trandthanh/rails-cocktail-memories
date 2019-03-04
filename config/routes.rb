@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :doses, only: [ :destroy ]
 
   # get '/search', to: "pages#search"
-  get '/search', to: "cockails#index"
+  get '/search', to: "cocktails#index"
 
   root to: "pages#home"
 end

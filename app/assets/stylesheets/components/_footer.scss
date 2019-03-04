@@ -1,0 +1,17 @@
+.footer-cm {
+  height: 40vh;
+  background-color: $platinum;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.newsletter {
+  border-bottom: 2px solid black;
+}
+
+.footer-cm-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

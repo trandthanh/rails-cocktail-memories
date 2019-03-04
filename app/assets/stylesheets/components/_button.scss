@@ -8,3 +8,21 @@
     text-decoration: none;
   }
 }
+
+
+.button-cm-transparent {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.button-strip {
+  background-color: transparent;
+  border: 0;
+}

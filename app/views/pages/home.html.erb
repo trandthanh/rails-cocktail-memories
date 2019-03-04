@@ -16,7 +16,7 @@
 
 <div class="wrapper-cm-center text-center">
   <h4 class="mb-80px">Our WINTER cocktails</h4>
-  <div class="container">
+  <div class="container mb-80px">
     <div class="row">
       <% @topcocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
@@ -32,6 +32,18 @@
     </div>
   </div>
   <%= link_to "SEE MORE >", search_path, class: "button-cm" %>
+</div>
+
+<div class="wrapper-cm-center background-picture-bottom height-100vh wrapper-flex-right" style="background-image: url(<%= asset_path 'cocktail2.png' %>);">
+  <div class="banner-cm-half-bg-transparent text-center banner-cm-center-center-column p-20px">
+    <p class="margin-strip mb-30px white-text">OUR COCKTAIL OF THE MONTH</p>
+    <h1 class="margin-strip mb-30px white-text">WHISKY SOUR</h1>
+    <p class="margin-strip mb-30px white-text">
+      Perfect for the summer <br>
+      Reminisce over the past and invent the future
+    </p>
+      <%= link_to "SEE MORE >", new_cocktail_path, class: "button-cm-transparent" %>
+  </div>
 </div>
 
 <div class="wrapper-cm-center text-center">
