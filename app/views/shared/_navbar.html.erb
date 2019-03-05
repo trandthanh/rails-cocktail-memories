@@ -21,7 +21,11 @@
 
 <div class="navbar-cm-2 text-center">
   <div class="navbar-cm-2-middle">
-    <p class="margin-strip">ALL COCKTAILS</p>
-    <p class="margin-strip">THE STORY</p>
+    <%= link_to search_path do %>
+      <p class="margin-strip">ALL COCKTAILS</p>
+    <% end %>
+    <%= link_to story_path do %>
+      <p class="margin-strip">THE STORY</p>
+    <% end %>
   </div>
 </div>

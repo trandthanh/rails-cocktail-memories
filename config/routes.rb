@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # get '/search', to: "pages#search"
   get '/search', to: "cocktails#index"
+  get '/story', to: "pages#story"
 
   root to: "pages#home"
 end
