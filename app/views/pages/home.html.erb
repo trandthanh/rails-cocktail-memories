@@ -53,7 +53,7 @@
     <h4>Our MOST-VOTED cocktails</h4>
     <% @cocktails.each do |cocktail| %>
       <div class="card-cm" data-aos="fade-in">
-        <div class="card-cm-half background-picture" style="background-image: url(<%= asset_path 'cocktail1.png' %>);"></div>
+        <div class="card-cm-half background-picture" style="background-image: url(<%= asset_path "#{cocktail.photo}" %>);"></div>
         <div class="card-cm-half flex flexdirection-column justifycontent-center alignitems-flexstart pl-40px">
           <p class="font-13px margin-strip">WITH BAE • AT THE MOUNTAIN</p>
           <%= link_to cocktail_path(cocktail) do %>

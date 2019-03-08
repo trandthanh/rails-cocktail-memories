@@ -5,7 +5,7 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
-  validates :season, inclusion: { in: ["spring", "summer", "autumn", "winter"] }
+  validates :season, inclusion: { in: ["Spring", "Summer", "Autumn", "Winter", ""] }, allow_blank: true
 
   mount_uploader :photo, PhotoUploader
 end

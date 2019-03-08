@@ -1,9 +1,25 @@
-<h1>All cocktails</h1>
+<%= render 'searchnavbar' %>
 
-<% @cocktails.each do |cocktail| %>
-  <div>
-    <%= cocktail.name %>
-    <br>
-    <%= link_to "See more", cocktail_path(cocktail) %>
+<div class="searchresults p-40px">
+  <p class="mb-50px">Search results for "<%= params[:query].nil? ? "All" : params[:query] %>" (<%= @cocktails.count %> results)</p>
+
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card-cm-vertical mb-40px">
+            <%= link_to cocktail_path(cocktail) do %>
+              <div class="card-cm-vertical-top background-picture" style="background-image: url(<%= asset_path "#{cocktail.photo}" %>);"></div>
+            <% end %>
+            <div class="card-cm-vertical-bottom">
+              <p class="font-13px margin-strip">WITH BAE • AT THE MOUNTAIN</p>
+              <%= link_to cocktail_path(cocktail) do %>
+                <h5 class="margin-strip mt-10px"><%= cocktail.name %></h5>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>

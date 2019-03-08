@@ -9,3 +9,11 @@
 .darkmediumgray-text {
   color: $dark-medium-gray;
 }
+
+#query {
+  font-size: 18px;
+}
+
+#query::placeholder {
+  color: #D0D0D0;
+}
