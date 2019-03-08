@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_163526) do
+ActiveRecord::Schema.define(version: 2019_03_08_092925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2019_02_28_163526) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.string "season"
+    t.string "moment"
+    t.string "person"
   end
 
   create_table "doses", force: :cascade do |t|
@@ -28,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_163526) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "quantity"
     t.index ["cocktail_id", "ingredient_id"], name: "index_doses_on_cocktail_id_and_ingredient_id", unique: true
     t.index ["cocktail_id"], name: "index_doses_on_cocktail_id"
     t.index ["ingredient_id"], name: "index_doses_on_ingredient_id"

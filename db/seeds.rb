@@ -1,10 +1,10 @@
 require 'open-uri'
 
 puts "Destroy ingredients"
-Ingredient.destroy_all if Rails.env.development?
+Ingredient.destroy_all
 
 puts "Destroy Cocktails"
-Cocktail.destroy_all if Rails.env.development?
+Cocktail.destroy_all
 
 puts "Create ingredients"
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
