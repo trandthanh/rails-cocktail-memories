@@ -1,7 +1,9 @@
 <div class="footer-cm">
   <div class="footer-cm-left">
     <h3 class="margin-strip mb-10px darkmediumgray-text">Get in touch</h3>
-    <p class="margin-strip">contact@cocktailmemories.com</p>
+    <%= mail_to "contact@cocktailmemories.com" do %>
+      <p class="margin-strip">contact@cocktailmemories.com</p>
+    <% end %>
   </div>
   <div class="footer-cm-right">
     <div class="newsletter">

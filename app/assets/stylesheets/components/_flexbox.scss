@@ -6,3 +6,15 @@
 .flex {
   display: flex;
 }
+
+.flexdirection-column {
+  flex-direction: column;
+}
+
+.justifycontent-center {
+  justify-content: center;
+}
+
+.alignitems-flexstart {
+  align-items: flex-start;
+}
