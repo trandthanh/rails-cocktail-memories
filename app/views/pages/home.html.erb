@@ -21,9 +21,11 @@
       <% @topcocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="card-cm-vertical">
-            <div class="card-cm-vertical-top background-picture" style="background-image: url(<%= asset_path "#{cocktail.photo}" %>);"></div>
+            <%= link_to cocktail_path(cocktail) do %>
+              <div class="card-cm-vertical-top background-picture" style="background-image: url(<%= asset_path "#{cocktail.photo}" %>);"></div>
+            <% end %>
             <div class="card-cm-vertical-bottom">
-              <p class="font-13px margin-strip">WITH BAE • AT THE MOUNTAIN</p>
+              <p class="font-13px margin-strip">WITH <%= cocktail.person.upcase %> • AT <%= cocktail.moment.upcase %> • <%= cocktail.season.upcase %></p>
               <%= link_to cocktail_path(cocktail) do %>
                 <h5 class="margin-strip mt-10px"><%= cocktail.name %></h5>
               <% end %>
@@ -53,9 +55,11 @@
     <h4>Our MOST-VOTED cocktails</h4>
     <% @cocktails.each do |cocktail| %>
       <div class="card-cm" data-aos="fade-in">
-        <div class="card-cm-half background-picture" style="background-image: url(<%= asset_path "#{cocktail.photo}" %>);"></div>
+        <%= link_to cocktail_path(cocktail), class: "width-50pc" do %>
+          <div class="height-100pc width-100pc background-picture" style="background-image: url(<%= asset_path "#{cocktail.photo}" %>);"></div>
+        <% end %>
         <div class="card-cm-half flex flexdirection-column justifycontent-center alignitems-flexstart pl-40px">
-          <p class="font-13px margin-strip">WITH BAE • AT THE MOUNTAIN</p>
+          <p class="font-13px margin-strip">WITH <%= cocktail.person.upcase %> • AT <%= cocktail.moment.upcase %> • <%= cocktail.season.upcase %></p>
           <%= link_to cocktail_path(cocktail) do %>
             <h5><%= cocktail.name %></h5>
           <% end %>
